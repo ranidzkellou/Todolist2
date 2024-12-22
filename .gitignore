@@ -1,4 +1,18 @@
-/node_modules
+# Ignore node_modules in both folders
+Backend/node_modules/
+FrontEnd/node_modules/
+
+# Ignore log files
 *.log
-/dist
-.env
+
+# Ignore build directories
+Backend/dist/
+FrontEnd/dist/
+
+# Ignore environment files
+Backend/.env
+FrontEnd/.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db

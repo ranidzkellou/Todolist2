@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0 auto;
+  width: min(99dvw, 1900px);
+}
+
+body{
+  
+  background-color: white !important;
+}
+
+input[type="checkbox"] { 
+  position: relative; 
+  transition: all; 
+  transition-duration: 250ms; 
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background-color: gray; 
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+ 
+input[type="checkbox"]:checked { 
+  background-color: #1AA7FF; 
+  border: none; 
+} 
+ 
+input[type="checkbox"]::after { 
+  content: ''; 
+  position: absolute;
+  display: none; 
+} 
+ 
+input[type="checkbox"]:checked::after { 
+  display: block;
+  position: absolute; 
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); 
+  width: calc(0.25 * var(--checkbox-size)); /* Width proportional to checkbox */
+  height: calc(0.5 * var(--checkbox-size)); /* Height proportional to checkbox */
+  border: solid white; 
+  border-width: 0 calc(0.1 * var(--checkbox-size)) calc(0.1 * var(--checkbox-size)) 0; 
+  border-radius: calc(0.05 * var(--checkbox-size)); /* Rounded corners proportional to size */
+}
+
+input[type="checkbox"] {
+  --checkbox-size: 25px;
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
